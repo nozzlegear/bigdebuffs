@@ -24,3 +24,5 @@ manual-changelog:
 ignore:
   - README.md
   - generate_changelog.sh
+  - install.fish
+  - watch.fish
