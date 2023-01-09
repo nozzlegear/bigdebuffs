@@ -24,5 +24,6 @@ manual-changelog:
 ignore:
   - README.md
   - generate_changelog.sh
+  - BlizzardRaidFramesFix/*.toc
   - install.fish
   - watch.fish
