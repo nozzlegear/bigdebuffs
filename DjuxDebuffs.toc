@@ -28,4 +28,3 @@ BigDebuffs.xml
 BigDebuffs_Mainline.lua
 BigDebuffs.lua
 Options.lua
-BlizzardRaidFramesFix/BlizzardRaidFramesFix.lua
