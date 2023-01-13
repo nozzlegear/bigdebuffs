@@ -537,6 +537,7 @@ addon.Spells = {
         [207498] = { type = BUFF_DEFENSIVE, parent = 207495 }, -- Ancestral Protection (Player)
 	[356738] = { type = ROOT }, -- Earth Unleashed
 	[285515] = { type = ROOT }, -- Surge of Power (Root)
+	[356824] = { type = DEBUFF_OFFENSIVE }, -- Water Unleashed
 
     -- Warlock
     [386997] = { type = DEBUFF_OFFENSIVE }, -- Soul Rot
