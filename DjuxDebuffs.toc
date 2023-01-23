@@ -5,8 +5,6 @@
 ## Author: Djux
 ## SavedVariables: BigDebuffsDB
 ## OptionalDeps: Masque
-## X-Curse-Project-ID: 757076
-## X-Wago-ID: VBNBpVKx
 
 #@no-lib-strip@
 Libs\LibStub\LibStub.lua
