@@ -455,6 +455,36 @@ local GetAnchor = {
             return frame, frame, true
         end
     end,
+    PitBull = function(anchor)
+        local frame = _G[anchor]
+        if not frame then return end
+        if frame.Portrait and frame.Portrait:IsShown() then
+            return frame.Portrait, frame
+        else
+            return frame, frame, true
+        end
+    end,
+    Cell = function(anchor)
+        local anchors, unit = BigDebuffs.anchors
+
+        for u, configAnchor in pairs(anchors.Cell.units) do
+            if anchor == configAnchor then
+                unit = u
+                break
+            end
+        end
+
+        if unit and (unit:match("party") or unit:match("player")) then
+            if Cell then
+                local guid = UnitGUID(unit)
+                local frame = Cell.funcs:GetUnitButtonByGUID(guid)
+                if frame then
+                    return frame, frame, true
+                end
+            end
+            return
+        end
+    end,
 }
 
 local GetNameplateAnchor = {
@@ -687,6 +717,31 @@ local anchors = {
             arena3 = "sArenaEnemyFrame3",
             arena4 = "sArenaEnemyFrame4",
             arena5 = "sArenaEnemyFrame5",
+        },
+    },
+    ["Pitbull"] = {
+        func = GetAnchor.PitBull,
+        units = {
+            player = "PitBull4_Frames_Player",
+            pet = "PitBull4_Frames_Player's pet",
+            target = "PitBull4_Frames_Target",
+            focus = "PitBull4_Frames_Focus",
+            party1 = "PitBull4_Groups_PartyUnitButton1",
+            party2 = "PitBull4_Groups_PartyUnitButton2",
+            party3 = "PitBull4_Groups_PartyUnitButton3",
+            party4 = "PitBull4_Groups_PartyUnitButton4",
+        },
+    },
+    ["Cell"] = {
+        noPortait = true,
+        alignLeft = true,
+        func = GetAnchor.Cell,
+        units = {
+            player = "CellPartyFrameMember1",
+            party1 = "CellPartyFrameMember2",
+            party2 = "CellPartyFrameMember3",
+            party3 = "CellPartyFrameMember4",
+            party4 = "CellPartyFrameMember5",
         },
     },
     ["Blizzard"] = {
