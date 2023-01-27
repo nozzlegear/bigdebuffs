@@ -1,69 +1,25 @@
-A fork of BigDebuffs with some changes/fixes for Dragonflight. At the moment, most of these fixes were contributed by [Bicmex](https://www.youtube.com/c/Bicmex) and were found on his Discord server. All credit for the [original BigDebuffs addon](https://github.com/jordonwow/bigdebuffs) goes to the wonderful [jordonwow on GitHub](https://github.com/jordonwow).
+# The purpose of this fork
 
-I plan to maintain this fork for as long as the author of the original BigDebuffs remains inactive. However, please keep in mind that I did not write the original code and need to familiarize myself with it before I can fix bugs quickly or write new features.
+Originally I had planned on publishing this as a fork of [BigDebuffs](https://github.com/jordonwow/bigdebuffs), as I thought the author was inactive. That is not the case, so I've removed this addon from Wago and will be contributing changes back to BigDebuffs instead. This repository just serves as a place for me to check in code that I'm experimenting with.
 
-# Download & Installation
-
-You can download this addon from [Wago](https://addons.wago.io/addons/djuxdebuffs) or from the [GitHub releases page](https://github.com/nozzlegear/bigdebuffs/releases/latest). Curse/Overwolf is currently not supported, I recommend using [Wago's addon installer](https://addons.wago.io/) or [WowUp](https://wowup.io/). 
-
-If you don't want to use another addon installer, you can always download the zip file from Wago or GitHub and then unzip it into your addons folder. Once unzipped, your file structure should look like this:
+If you want to install my experimental version of BigDebuffs, you can do so by [downloading the zip file on the latest releases page](https://github.com/nozzlegear/bigdebuffs/releases/latest). Unzip it and drop the DjuxDebuffs folder into your `_retail_/Interface/AddOns` folder.
 
 ```
-Interface
-└── AddOns
-    └── DjuxDebuffs
-        ├── BigDebuffs.lua
-        ├── BigDebuffs.toc
-        └── etc
+_retail_
+└── Interface
+    └── AddOns
+        └── DjuxDebuffs
 ```
 
-# BigDebuffs
-BigDebuffs is an _extremely lightweight_ addon that hooks the Blizzard raid frames to increase the debuff size of crowd control effects. Additionally, it replaces unit frame portraits with debuff durations when important debuffs are present.
+### Copying BigDebuffs settings
 
-[Open a ticket to report any issues](https://github.com/nozzlegear/bigdebuffs/issues)
+If you need to copy BigDebuffs settings over to this experimental version, you can do the following:
 
-[Submit a pull request](https://github.com/nozzlegear/bigdebuffs/pulls)
+1. Open your `_retail/WTF/Account/{AccountName}/SavedVariables` folder.
+2. Log out of your character in WoW, if you're logged in.
+3. Make a copy of the `BigDebuffs.lua` and `BigDebuffs.lua.bak` files.
+4. Rename the copied files to `DjuxDebuffs.lua` and `DjuxDebuffs.lua.bak`
 
-## Features
+Your BigDebuffs settings should now be copied to this experimental addon. Make sure you only have one version of the addon running at a time!.
 
-### Anchor
-Anchor BigDebuffs to the inner (default), left, or right of the raid frames.
-
-![BigDebuffs Anchor Inner](https://i.imgur.com/O9Yacnl.png)
-![BigDebuffs Anchor Right](https://i.imgur.com/NfADLaw.png)
-![BigDebuffs Anchor Left](https://i.imgur.com/gYQ8DEM.png)
-
-### Increase Maximum Buffs
-Sets the maximum buffs displayed to 6.
-
-![BigDebuffs Increase Maximum Buffs](https://i.imgur.com/iq5I2E4.png)
-
-### Scale
-Set the scale of the various types of debuffs.
-
-### Warning Debuffs
-Always show warning debuffs when BigDebuffs are displayed.
-
-![BigDebuffs Special Debuffs](https://i.imgur.com/b0UWslt.png)
-
-### Unit Frames
-Show BigDebuffs on the unit frames.
-
-![BigDebuffs Unit Frames](https://i.imgur.com/6QSbDlB.png)
-
-### Third Party Support
-BigDebuffs is fully compatible with the followings mods:
-
-*   Z-Perl UnitFrames
-*   Shadowed Unit Frames
-*   ElvUI
-*   Adapt
-*   bUnitFrames
-
-![BigDebuffs Z-Perl](https://i.imgur.com/ZOr4tbi.png)
-
-### Profiles
-Create custom profiles with dual specialization support.
-
-## Configuration
-To open the options panel, type `/bd`
+To copy settings from the experimental version back to BigDebuffs, you can reverse the above process. **Warning: copying experimental settings back to the original addon risks breaking the original addon's settings.**
