@@ -3,6 +3,7 @@ max_line_length = false
 exclude_files = {
     ".luacheckrc",
     "Libs/",
+    "BlizzardRaidFramesFix/"
 }
 ignore = {
     "11./SLASH_.*",

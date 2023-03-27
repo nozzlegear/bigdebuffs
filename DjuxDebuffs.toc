@@ -1,12 +1,10 @@
-## Interface: 100002
+## Interface: 100005
 ## Title: DjuxDebuffs
 ## Notes: Increases the debuff size of crowd control effects on the Blizzard raid frames
 ## Version: @project-version@
 ## Author: Djux
 ## SavedVariables: BigDebuffsDB
 ## OptionalDeps: Masque
-## X-Curse-Project-ID: 757076
-## X-Wago-ID: VBNBpVKx
 
 #@no-lib-strip@
 Libs\LibStub\LibStub.lua
